@@ -1,3 +1,7 @@
 pandas=1.4.2
 openpyxl=3.0.10
 matplotlib=3.5.2
+lxml=4.9.0
+fastparquet=0.8.1
+pyarrow=8.0.0
+sqlalchemy=1.4.37
