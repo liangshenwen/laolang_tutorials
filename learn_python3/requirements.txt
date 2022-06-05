@@ -5,3 +5,4 @@ lxml=4.9.0
 fastparquet=0.8.1
 pyarrow=8.0.0
 sqlalchemy=1.4.37
+tables=3.7.0
