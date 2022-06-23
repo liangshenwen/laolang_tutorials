@@ -1,3 +1,5 @@
 .idea
 .ipynb_checkpoints
 __pycache__
+pip_install.log
+target
