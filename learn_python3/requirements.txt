@@ -7,3 +7,4 @@ pyarrow=8.0.0
 sqlalchemy=1.4.37
 tables=3.7.0
 jupyterlab=3.4.3
+pyaml=21.10.1
