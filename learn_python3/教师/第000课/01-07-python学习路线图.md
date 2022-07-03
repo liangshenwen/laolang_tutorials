@@ -18,6 +18,9 @@ https://www.processon.com/mindmap/629fe3831e0853153226acd4
 
 #### ![img](01-07-python学习路线图.assets/v2-9d8eb066940ba09a132806ab6dc9002f_1440w.jpg)
 
+# 推荐使用教程
+![](01-07-python学习路线图.assets/3f9e5502.png)
+https://item.jd.com/14348800157.html  
 
 
 # 参考资料
