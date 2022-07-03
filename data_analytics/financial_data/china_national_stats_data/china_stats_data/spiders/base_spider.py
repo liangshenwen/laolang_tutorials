@@ -31,10 +31,10 @@ class BaseSpider:
         self.year_input = year_input
         self.table_name = table_name
         self.table_col_types = table_col_types
-        # 获取chrome浏览器驱动
-        self.driver = get_chrome_driver()
 
     def _start(self):
+        # 获取chrome浏览器驱动
+        self.driver = get_chrome_driver()
         self.driver.get(self.url)
 
     def _make_ui_data_ready(self):
