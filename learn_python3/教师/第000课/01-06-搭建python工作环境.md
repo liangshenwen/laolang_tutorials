@@ -49,3 +49,6 @@ PyCharm是一种[Python](https://baike.baidu.com/item/Python/407313) [IDE](https
 
 ![安装pycharm](01-06-搭建python工作环境.assets/install_pycharm.gif)
 
+# Win7安装Python3.8.10 
+https://zhuanlan.zhihu.com/p/390819620
+
