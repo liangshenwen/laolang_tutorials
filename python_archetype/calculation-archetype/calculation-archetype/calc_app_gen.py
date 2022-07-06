@@ -54,8 +54,8 @@ if __name__ == '__main__':
         "-pv",
         "--python-version",
         dest="python_version",
-        default='3.7',
-        help="The version for python (e.g. 3.7 or 3.9)."
+        default='3.7.0',
+        help="The version for python (e.g. 3.7.0 or 3.9.0)."
     )
 
     parser.add_argument(
@@ -70,8 +70,8 @@ if __name__ == '__main__':
         "-mfv",
         "--metaflow-version",
         dest="metaflow_version",
-        default='2.7.1',
-        help="The version for metaflow (e.g. 2.7.1)."
+        default='2.2.5',
+        help="The version for metaflow (e.g. 2.2.5 or 2.7.1)."
     )
 
     parser.add_argument(

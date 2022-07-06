@@ -1,0 +1,45 @@
+[[tool.poetry.source]]
+name = "public"
+url = "https://pypi.org/simple/"
+
+[[tool.poetry.source]]
+name = "pypi-cap"
+url = "https://msnexus.morningstar.com/repository/pypi-cap/simple"
+secondary = true
+
+[[tool.poetry.source]]
+name = "pypi-hosted"
+url = "https://msnexus.morningstar.com/repository/pypi-hosted/simple"
+default = true
+
+[tool.poetry]
+name = "{{project_name}}"
+version = "0.1.0"
+description = "The {{project_name}} is used for xxxxx."
+authors = ["xxx xxxxxxx.xxx@morningstar.com>"]
+
+[tool.poetry.dependencies]
+python = "^{{python_version}}"
+starflow = "^{{starflow_version}}"
+metaflow = "^{{metaflow_version}}"
+calculation-sdk = "{{calc_sdk_version}}"
+numpy = "1.21.1"
+pandas = "1.1.5"
+boto3 = "^1.17.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "6.2.4"
+moto = "^2.2.6"
+coverage = "^6.0"
+pytest-cov = "^3.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.6"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--junitxml results.xml --cov={{project_name}}/ --cov-report xml:coverage.xml"
+testpaths = [
+    "tests",
+]
