@@ -1,4 +1,5 @@
 from turtle import *
+title('太阳花')
 color('red', 'yellow')
 speed(5)
 begin_fill()

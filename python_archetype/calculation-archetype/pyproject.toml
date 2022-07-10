@@ -20,7 +20,7 @@ authors = ["Samon Liang <samon.liang@morningstar.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9.0"
+python = "^3.9"
 Jinja2 = "^3.1.2"
 
 [tool.poetry.dev-dependencies]

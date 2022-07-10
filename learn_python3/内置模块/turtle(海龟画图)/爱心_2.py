@@ -6,13 +6,11 @@ begin_fill()
 left(135)  # 左转135°
 print('left(135):', heading())
 forward(100)  # 前进100像素
-right(180)  # 画笔掉头
-print('right(180):', heading())
-circle(30, -180)  # 圆心在海龟左侧30个像素，以倒退的方式顺时针画一个半圆
+circle(-30, 180)  # 圆心在海龟右侧30个像素，顺时针画一个半圆
 print('circle 1:', heading())
-backward(35)  # 由于此时画笔方向约为绝对方向的135°，需倒退画线
-right(90)
-print('right(90):', heading())
+forward(35)  #
+left(90)
+print('left(90):', heading())
 forward(35)
 circle(-30, 180)  # 圆心在海龟右侧30个像素，顺时针画一个半圆
 print('circle 2:', heading())
