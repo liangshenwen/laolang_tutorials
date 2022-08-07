@@ -12,6 +12,15 @@ elif 75 <= score < 85:
 else:
     print('优秀')
 
+if score < 60:
+    print('不及格')
+elif score >= 60 and  score < 75:
+    print('及格')
+elif score>=75 and score < 85:
+    print('良好')
+else:
+    print('优秀')
+
 # while...else
 # 计算 1 到 100的和
 print('使用while来计算 1 到 100的和 ================')
