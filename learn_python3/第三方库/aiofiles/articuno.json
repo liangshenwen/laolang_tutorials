@@ -1,0 +1,7 @@
+{
+  "name":"articuno",
+  "moves": [
+    {"move": {"name":"abc"}},
+    {"move": {"name":"edf"}}
+  ]
+}

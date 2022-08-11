@@ -1,0 +1,7 @@
+{
+  "name":"rhydon",
+  "moves": [
+    {"move": {"name":"abc"}},
+    {"move": {"name":"edf"}}
+  ]
+}
