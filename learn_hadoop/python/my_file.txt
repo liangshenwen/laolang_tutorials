@@ -1,0 +1,3 @@
+mrjob fully supports Amazon's Elastic MapReduce (EMR) service, which allows you to buy time on a Hadoop cluster
+on an hourly basis. mrjob has basic support for Google Cloud Dataproc (Dataproc) which allows you to buy time on a
+Hadoop cluster on a minute-by-minute basis. It also works with your own Hadoop cluster.
