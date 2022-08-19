@@ -43,3 +43,11 @@ print('------- 使用逗号或者_作为千位分隔符')
 
 print('{:,}'.format(1234567890))
 print('{:_}'.format(1234567890))
+
+print('------------大括号转义')
+print ("{} 对应的位置是 {{0}}".format("laolang"))
+
+print('--------------转换镖旗')
+print("Harold's a clever {0!s}".format(1231))        # Calls str() on the argument first
+print("Bring out the holy {name!r}".format(name=('lao','lang')))    # Calls repr() on the argument first
+print("More {!a}".format('a'))                      # Calls ascii() on the argument first
