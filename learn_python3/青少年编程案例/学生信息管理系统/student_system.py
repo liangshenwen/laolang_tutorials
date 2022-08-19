@@ -22,6 +22,8 @@ UTF_8 = 'UTF-8'
 
 
 def show_menu():
+    """显示功能菜单.
+    """
     print('============================学生信息管理系统=================================')
     print('-------------------------------功能菜单-------------------------------------')
     prefix_blank = '                   '
@@ -29,7 +31,7 @@ def show_menu():
     print(prefix_blank, '2.查找学生信息')
     print(prefix_blank, '3.删除学生信息')
     print(prefix_blank, '4.修改学生信息')
-    print(prefix_blank, '5.根据分数对学生进行排序')
+    print(prefix_blank, '5.根据成绩对学生进行排序')
     print(prefix_blank, '6.统计学生总人数')
     print(prefix_blank, '7.显示所有学生信息')
     print(prefix_blank, '0.退出')
@@ -37,6 +39,8 @@ def show_menu():
 
 
 def save_students_to_file(student_lst):
+    """保存学生信息到本地文件.
+    """
     # 如果students.txt文件已经存在，采用追加的方式写入新数据, 如果不存在，使用写入方式录入新数据
     if os.path.exists(STUDENT_TXT_FILE):
         student_txt_file = open(STUDENT_TXT_FILE, mode='a', encoding=UTF_8)
@@ -51,6 +55,8 @@ def save_students_to_file(student_lst):
 
 
 def insert_student():
+    """插入学生信息模块.
+    """
     student_lst = []
     while True:
         stu_id = input('请输入ID(如1001):')
@@ -94,6 +100,8 @@ def insert_student():
 
 
 def show_students(student_lst):
+    """根据学生列表展示学生信息.
+    """
     if student_lst:
         # 居中对齐
         title_fmt = '{:^6}\t{:^12}\t{:^8}\t{:^8}\t{:^8}\t{:^8}'
@@ -117,6 +125,8 @@ def show_students(student_lst):
 
 
 def search_student():
+    """查找学生信息模块.
+    """
     while True:
         stu_id = ''
         stu_name = ''
@@ -161,6 +171,8 @@ def search_student():
 
 
 def delete_student():
+    """删除学生信息模块.
+    """
     while True:
         stu_id = input('请输入要删除的学生ID:')
         if stu_id:
@@ -200,6 +212,8 @@ def delete_student():
 
 
 def modify_student():
+    """修改学生信息模块.
+    """
     # 显示所有学生信息
     show_all_students()
 
@@ -251,6 +265,8 @@ def modify_student():
 
 
 def sort_students_by_score():
+    """根据成绩对学生信息进行排序模块.
+    """
     if os.path.exists(STUDENT_TXT_FILE):
         student_lst = []
         # 使用只读模式打开students.txt
@@ -307,6 +323,8 @@ def sort_students_by_score():
 
 
 def sum_students():
+    """统计学生信息模块.
+    """
     if os.path.exists(STUDENT_TXT_FILE):
         # 使用只读模式打开students.txt
         with open(STUDENT_TXT_FILE, mode='r', encoding=UTF_8) as f:
@@ -321,6 +339,8 @@ def sum_students():
 
 
 def show_all_students():
+    """展示所有学生信息模块.
+    """
     if os.path.exists(STUDENT_TXT_FILE):
         student_lst = []
         # 使用只读模式打开students.txt
@@ -337,6 +357,8 @@ def show_all_students():
 
 
 def main():
+    """学生信息管理系统主应用程序.
+    """
     while True:
         show_menu()
         menu_choice = int(input('请选择功能菜单:'))
