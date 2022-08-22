@@ -109,9 +109,14 @@ def show_students(student_lst):
         # 定义标题
         print(title_fmt.format('ID', '姓名', '语文成绩', '数学成绩', '英语成绩', '总成绩'))
         for student in student_lst:
-            sum_score = float(student[STUDENT_SCORE_CHINESE]) \
-                        + float(student[STUDENT_SCORE_MATH]) \
-                        + float(student[STUDENT_SCORE_ENGLISH])
+            # 第一种加总的方式: 多个值通过`+`直接相加
+            # sum_score = float(student[STUDENT_SCORE_CHINESE]) \
+            #             + float(student[STUDENT_SCORE_MATH]) \
+            #             + float(student[STUDENT_SCORE_ENGLISH])
+            # 第二种加总方式: 使用内置函数sum(元组)
+            sum_score = sum((float(student[STUDENT_SCORE_CHINESE]),
+                             + float(student[STUDENT_SCORE_MATH]),
+                             + float(student[STUDENT_SCORE_ENGLISH])))
             sum_score = round(sum_score, SCORE_PRECISION)
             print(data_fmt.format(student[STUDENT_ID],
                                   student[STUDENT_NAME],
@@ -294,6 +299,14 @@ def sort_students_by_score():
                     mode = input('请选择排序方式(1-按英语成绩排序, 2-按语文成绩排序, 3-按数学成绩排序, 0-按总成绩排序, -1-退出排序):')
                     # list.sort方法默认是按照升序，我们通过reverse标志位来控制是否按照降序
                     if mode == '1':
+                        # 排序方式1: 使用内置函数sorted(学历,key,reverse)
+                        # student_lst = sorted(student_lst, key=lambda x: float(x[STUDENT_SCORE_ENGLISH]),
+                        #                      reverse=reverse_flg)
+                        # 排序方式2: 使用sorted()和reversed(), sorted()如果不指定reverse参数，默认会按照升序
+                        # student_lst = sorted(student_lst, key=lambda x: float(x[STUDENT_SCORE_ENGLISH]))
+                        # if reverse_flg:
+                        #     student_lst = reversed(student_lst)
+                        # 排序方式3: 使用list的sort方法
                         student_lst.sort(key=lambda x: float(x[STUDENT_SCORE_ENGLISH]), reverse=reverse_flg)
                     elif mode == '2':
                         student_lst.sort(key=lambda x: float(x[STUDENT_SCORE_CHINESE]), reverse=reverse_flg)
