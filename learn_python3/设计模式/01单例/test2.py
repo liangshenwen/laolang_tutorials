@@ -1,22 +1,37 @@
-from tkinter import *
+import tkinter as tk
 
-root = Tk()
+window = tk.Tk()
+# 设置窗口大小
+winWidth = 600
+winHeight = 400
+# 获取屏幕分辨率
+screenWidth = window.winfo_screenwidth()
+screenHeight = window.winfo_screenheight()
 
-la1 = Label(root, text='用户名：')
-la1.grid(row=0, column=0)  # 0行0列
+x = int((screenWidth - winWidth) / 2)
+y = int((screenHeight - winHeight) / 2)
 
-en1 = Entry(root)  # 用户名文本框
-en1.grid(row=0, column=1, columnspan=2)  # 0行1列，跨2列
+# 设置主窗口标题
+window.title("绑定事件参数说明")
+# 设置窗口初始位置在屏幕居中
+window.geometry("%sx%s+%s+%s" % (winWidth, winHeight, x, y))
+# 设置窗口宽高固定
+window.resizable(0, 0)
 
-la2 = Label(root, text='密　码：')
-la2.grid(row=1, column=0)
 
-en2 = Entry(root)  # 密码文本框
-en2.grid(row=1, column=1, columnspan=2)  # 1行1列，跨2列
+def callBack(event):
+    print("button is click")
 
-but1 = Button(root, text="确定")
-but1.grid(row=2, column=1)
-but2 = Button(root, text="取消")
-but2.grid(row=2, column=2)
 
-root.mainloop()
+btn = tk.Button(window, text="点击")
+btn.bind("<Button-1>", callBack)
+btn.pack()
+
+
+def windowBack(event):
+    print(event.char)
+
+
+window.bind("<Key>", windowBack)
+
+window.mainloop()
